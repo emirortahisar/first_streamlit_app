@@ -23,7 +23,7 @@ my_fruit_list=my_fruit_list.set_index('Fruit')
 
 #lets put pick list so they can include what they want 
 
-streamlit.multiselect("Pick some fruits:",list(my_fruit_list.index)['Avocado','Strawberries'])
+streamlit.multiselect("Pick some fruits:",list(my_fruit_list.index),['Avocado','Strawberries'])
 
 #display on the table
 
