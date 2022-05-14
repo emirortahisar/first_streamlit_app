@@ -2,4 +2,10 @@ import streamlit
 
 streamlit.title('My Parent New Healty Dinner')
 
-streamlit.title('Emir Ortahisar ')
+streamlit.header('Breakfast Menu')
+
+streamlit.text('Breakfast Menu')
+
+streamlit.text('Breakfast Menu')
+
+streamlit.text('Breakfast Menu')
