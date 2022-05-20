@@ -29,5 +29,6 @@ fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/"+"kiwi")
 
 
 #take the json version and normalize it 
-fruityvice_normalized =pandas.json_normalize(fruityvice_response.json())
+fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
 #output is the screen as a  table 
+streamlit.dataframe(fruityvice_normalized)
