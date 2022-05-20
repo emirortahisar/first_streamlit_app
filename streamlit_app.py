@@ -32,7 +32,7 @@ streamlit.write('the user entered' , fruit_choice)
 
 
 import requests
-fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/+fruit_choice)
+fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/"+fruit_choice)
 
 
 #take the json version and normalize it 
