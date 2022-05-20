@@ -23,9 +23,16 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 streamlit.dataframe(fruits_to_show)
 
+#new section to display frity api resource 
+streamlit.header('Fruitvice Fuit Advice!')
+fruit_choice=streamlit.text_input('what fruit you like information about ?','Kiwi')
+streamlit.write('the user entered' , fruit_choice)
+
+
+
 
 import requests
-fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/"+"kiwi")
+fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/+fruit_choice)
 
 
 #take the json version and normalize it 
