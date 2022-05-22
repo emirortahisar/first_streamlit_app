@@ -30,7 +30,7 @@ streamlit.dataframe(fruits_to_show)
 
 #new section to display frity api resource 
 streamlit.header('Fruitvice Fuit Advice!')
-try
+try:
   fruit_choice=streamlit.text_input('what fruit you like information about ?','Kiwi')
   if not fruit_choise:
     streamlit.error("pelease enter a fruit to get information")
