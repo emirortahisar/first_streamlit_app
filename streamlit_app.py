@@ -51,11 +51,9 @@ streamlit.dataframe(my_data_row)
 
 
 
-add_my_list=add_my_list.set_index('Fruitn')
-fruits_selected_n=streamlit.multiselect("Pick some fruits:",list(add_my_list.index),['Avocado','Strawberry'])
-fruits_to_show_n = add_my_list.loc[fruits_selected_n]
-streamlit.dataframe(fruits_to_show_n)
-  
+streamlit.header('Fruitvice Fuit Advice!')
+fruit_choice=streamlit.text_input('what fruit you like information about ?','Kiwi')
+streamlit.write('the user entered' , fruit_choice)
   
   
   
