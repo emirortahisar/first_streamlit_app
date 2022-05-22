@@ -46,7 +46,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchall()
-streamlit.header("The Fruit_load list contains:")
+streamlit.header("The Fruit Load List contains:")
 streamlit.dataframe(my_data_row)
                                    
 
