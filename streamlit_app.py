@@ -30,20 +30,16 @@ streamlit.dataframe(fruits_to_show)
 
 #new section to display frity api resource 
 streamlit.header('Fruitvice Fuit Advice!')
-fruit_choice=streamlit.text_input('what fruit you like information about ?','Kiwi')
-streamlit.write('the user entered' , fruit_choice)
-
-
-
-
-#import requests
-fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/"+fruit_choice)
-
-
-#take the json version and normalize it 
-fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
-#output is the screen as a  table 
-streamlit.dataframe(fruityvice_normalized)
+try
+  fruit_choice=streamlit.text_input('what fruit you like information about ?','Kiwi')
+  if not fruit_choise:
+    streamlit.error("pelease enter a fruit to get information")
+    else:
+      fruityvice_response=requests.get("https://www.fruityvice.com/api/fruit/"+fruit_choice)
+      fruityvice_normalized=pandas.json_normalize(fruityvice_response.json())
+      streamlit.dataframe(fruityvice_normalized)
+exept URLError as e:
+  streamlit.error()
 
 #dont run 
 streamlit.stop()
